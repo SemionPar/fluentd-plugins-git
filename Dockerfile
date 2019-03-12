@@ -11,6 +11,6 @@ RUN apk add --no-cache --update --virtual .build-deps \
     && apk del .build-deps \
     && rm -rf /home/fluent/.gem/ruby/2.5.0/cache/*.gem
 
-RUN apk add --no-cache git
+RUN apk add --no-cache git openssh-client
 
 USER fluent
