@@ -14,4 +14,6 @@ RUN apk add --no-cache --update --virtual .build-deps \
 
 RUN apk add --no-cache git openssh-client
 
+RUN mkdir /var/log/td-agent && chown fluent:fluent /var/log/td-agent
+
 USER fluent
