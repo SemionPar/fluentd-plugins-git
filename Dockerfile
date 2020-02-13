@@ -2,8 +2,8 @@ FROM fluent/fluentd:v1.7-1
 
 USER root
 
-RUN apk add --no-cache --update --virtual .build-deps \
-    sudo build-base ruby-dev \
+RUN apk add --no-cache --update jq \
+    && apk add --no-cache --update --virtual .build-deps sudo build-base ruby-dev \
     && sudo gem install \
     fluent-plugin-elasticsearch \
     fluent-plugin-route \
